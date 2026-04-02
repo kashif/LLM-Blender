@@ -119,7 +119,7 @@ class Blender:
                     logging.warning(
                         f"Try dowloading checkpoint from huggingface hub: {ranker_path}"
                     )
-                    snapshot_download(ranker_path, local_dir=cache_dir / ranker_path)
+                    snapshot_download(ranker_path, cache_dir=cache_dir)
                     ranker_path = cache_dir / ranker_path
                     logging.warning(
                         f"Successfully downloaded checkpoint to '{ranker_path}'"
